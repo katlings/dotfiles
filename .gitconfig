@@ -1,5 +1,8 @@
 [user]
-	email = kathrynlingel@igneoussystems.com
+	email = klingel@igneous.io
 	name = Kathryn Lingel
 [push]
 	default = simple
+[alias]
+	co = checkout
+	br = branch
