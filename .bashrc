@@ -111,3 +111,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export GOPATH=$HOME/mesa/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin

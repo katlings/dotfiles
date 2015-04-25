@@ -16,7 +16,7 @@
 
 execute pathogen#infect()
 
-set tabstop=4 shiftwidth=4 smarttab smartcase autoindent nosmartindent
+set tabstop=4 shiftwidth=4 smarttab smartcase autoindent nosmartindent hlsearch
 syntax on
 map # :set invnumber
 filetype plugin indent on
