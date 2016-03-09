@@ -1,9 +1,16 @@
 setxkbmap -option "caps:swapescape"
 
 alias rebash='source $HOME/.bashrc'
-alias gosource='cd $HOME/mesa/go/src/igneous.io'
 alias tmux='tmux -2'
-alias remake='make wipe && make clean && make && make topo12'
+alias ack='ack-grep'
+alias activate='. venv/bin/activate'
 
-export GOPATH=$HOME/mesa/go
-export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+alias rm='rm -I'
+
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:$HOME/.local/bin:$HOME/installs/go_appengine:$HOME/installs
+
+shrug(){ echo -n "¯\_(ツ)_/¯" | (xsel||pbcopy);echo "¯\_(ツ)_/¯ copied to your clipboard"; }
+
+source /$HOME/.local/bin/virtualenvwrapper.sh > /dev/null
+export WORKON_HOME=$HOME/virtualenvs
+export PROJECT_HOME=$HOME/pyprojects
