@@ -30,15 +30,17 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-execute pathogen#infect()
+" Call :PluginInstall
 
-set tabstop=4 shiftwidth=4 smarttab smartcase autoindent nosmartindent hlsearch
+set tabstop=4 shiftwidth=4 smarttab smartcase autoindent nosmartindent hlsearch expandtab
 syntax on
 map # :set invnumber
 
