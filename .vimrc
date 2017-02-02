@@ -14,8 +14,14 @@
 
 """"""""let g:flake8_ignore="E501,E111,E221"
 
-set nocompatible              " required
-filetype off                  " required
+" Use Vundle as a plugin manager: http://github.com/VundleVim/Vundle.vim
+
+" Initial setup:
+" $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" run :PluginInstall from vim, or $ vim +PluginInstall +qall
+
+set nocompatible              " required for Vundle
+filetype off                  " required for Vundle
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -30,19 +36,28 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-" Call :PluginInstall
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ" To ignore plugin indent changes, instead use:
 
 set tabstop=4 shiftwidth=4 smarttab smartcase autoindent nosmartindent hlsearch expandtab
 syntax on
 map # :set invnumber
+highlight ExtraWhitespace ctermbg=red guibg=red
 
 " Enable folding
 set foldmethod=indent
