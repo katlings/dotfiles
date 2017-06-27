@@ -1,10 +1,21 @@
 [user]
-	email = kathryn@lingel.net
-	name = Kathryn Lingel
+    email = kathryn@lingel.net
+    name = Kathryn Lingel
 [push]
-	default = simple
+    default = simple
 [alias]
-	co = checkout
-	br = branch
+    co = checkout
+    br = branch
+    st = status
+    ci = commit
+    cob = checkout -b
+    po = push -u origin
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # see the revision history similar to gitk but in the command line
+    lol = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad%C(reset)%C(auto)%d %C(reset)%s %C(green)[%cn]' --date=short --all --graph --decorate
+    # pretty one-line log with tags, branches and authors
+    ls = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad %C(reset)%C(auto)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+    # more verbose log that shows changed files
+    ll = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad %C(reset)%C(auto)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --stat
 [core]
-	editor = vim
+    editor = vim

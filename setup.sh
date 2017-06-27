@@ -16,7 +16,7 @@ curl -X POST -u katlings -d '{"title":"`echo $HOSTNAME`","key":"'"$(cat $HOME/.s
 
 # dotfiles
 git clone git@github.com:katlings/dotfiles.git # then type yes and press enter to connect
-cp dotfiles/.* $HOME
+cp dotfiles/.* $HOME # TODO: symlinks
 source $HOME/.bashrc
 
 # Vim plugins
