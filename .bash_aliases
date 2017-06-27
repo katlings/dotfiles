@@ -1,4 +1,5 @@
 setxkbmap -option "caps:swapescape"
+set -o vi
 
 alias rebash='source $HOME/.bashrc'
 alias tmux='tmux -2'
