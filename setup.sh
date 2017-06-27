@@ -4,7 +4,9 @@
 
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install ack-grep git python-pip tmux vim
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev ack-grep git python-pip tmux vim
 
 # Generate an SSH key and register it with github
 ssh-keygen # and press enter twice to generate key
@@ -13,13 +15,13 @@ echo 'Enter github password:'
 curl -X POST -u katlings -d '{"title":"`echo $HOSTNAME`","key":"'"$(cat $HOME/.ssh/id_rsa.pub)"'"}' https://api.github.com/user/keys
 
 # dotfiles
-git clone git@github.com:katlings/dotfiles.git # and press enter to connect
+git clone git@github.com:katlings/dotfiles.git # then type yes and press enter to connect
 cp dotfiles/.* $HOME
 source $HOME/.bashrc
 
 # Vim plugins
 git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall # and quit when it finishes running
+vim +PluginInstall +qall # and quit when it finishes running, if necessary
 
 # Pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
